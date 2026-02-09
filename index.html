@@ -1,0 +1,1833 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Portfolio BTS SIO SLAM de Matheo GOODMAN : présentation, parcours, projets, veille technologique et contact."
+    />
+    <meta name="author" content="Matheo GOODMAN" />
+    <title>Portfolio BTS SIO | Matheo GOODMAN</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/favicon.ico"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <script
+      src="https://kit.fontawesome.com/a2d9d5e3c0.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --bg-dark: #050816;
+        --bg-alt: #0f172a;
+        --accent: #6366f1;
+        --accent-soft: rgba(99, 102, 241, 0.1);
+        --text-main: #f9fafb;
+        --text-muted: #9ca3af;
+        --card-bg: rgba(15, 23, 42, 0.9);
+        --border-subtle: rgba(148, 163, 184, 0.3);
+        --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.9);
+        --radius-xl: 18px;
+      }
+
+      body {
+        font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        background: #0a0a0f;
+        color: var(--text-main);
+        line-height: 1.6;
+        scroll-behavior: smooth;
+        position: relative;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+
+      /* Fond animé : mesh gradient (style kothanromeo.dev) */
+      .bg-animation {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        overflow: hidden;
+        background: #0a0a0f;
+      }
+
+      .bg-animation::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: 
+          radial-gradient(circle at 20% 30%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+          radial-gradient(circle at 80% 70%, rgba(6, 182, 212, 0.12) 0%, transparent 50%),
+          radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+        animation: gradient-shift 15s ease infinite;
+        will-change: transform;
+      }
+
+      .bg-animation::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: 
+          radial-gradient(circle at 60% 20%, rgba(34, 211, 238, 0.1) 0%, transparent 50%),
+          radial-gradient(circle at 30% 80%, rgba(79, 70, 229, 0.12) 0%, transparent 50%);
+        animation: gradient-shift-reverse 20s ease infinite;
+        will-change: transform;
+      }
+
+      .bg-animation .orb {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(120px);
+        pointer-events: none;
+        will-change: transform;
+        opacity: 0.6;
+      }
+
+      .bg-animation .orb-1 {
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(circle, rgba(99, 102, 241, 0.4) 0%, transparent 70%);
+        top: -200px;
+        left: -200px;
+        animation: float-orb-1 20s ease-in-out infinite;
+      }
+
+      .bg-animation .orb-2 {
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle, rgba(6, 182, 212, 0.35) 0%, transparent 70%);
+        top: 50%;
+        right: -150px;
+        animation: float-orb-2 25s ease-in-out infinite;
+        animation-delay: -5s;
+      }
+
+      .bg-animation .orb-3 {
+        width: 450px;
+        height: 450px;
+        background: radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, transparent 70%);
+        bottom: -150px;
+        left: 20%;
+        animation: float-orb-3 22s ease-in-out infinite;
+        animation-delay: -10s;
+      }
+
+      .bg-animation .orb-4 {
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(circle, rgba(34, 211, 238, 0.25) 0%, transparent 70%);
+        top: 60%;
+        left: -100px;
+        animation: float-orb-4 28s ease-in-out infinite;
+        animation-delay: -3s;
+      }
+
+      @keyframes gradient-shift {
+        0%, 100% {
+          transform: translate(0, 0) scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: translate(5%, 5%) scale(1.1);
+          opacity: 0.8;
+        }
+      }
+
+      @keyframes gradient-shift-reverse {
+        0%, 100% {
+          transform: translate(0, 0) scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: translate(-5%, -5%) scale(1.1);
+          opacity: 0.8;
+        }
+      }
+
+      @keyframes float-orb-1 {
+        0%, 100% {
+          transform: translate(0, 0) scale(1);
+        }
+        33% {
+          transform: translate(30px, -40px) scale(1.1);
+        }
+        66% {
+          transform: translate(-30px, 30px) scale(0.9);
+        }
+      }
+
+      @keyframes float-orb-2 {
+        0%, 100% {
+          transform: translate(0, 0) scale(1);
+        }
+        25% {
+          transform: translate(-40px, 30px) scale(1.08);
+        }
+        50% {
+          transform: translate(20px, -50px) scale(0.92);
+        }
+        75% {
+          transform: translate(35px, 20px) scale(1.05);
+        }
+      }
+
+      @keyframes float-orb-3 {
+        0%, 100% {
+          transform: translate(0, 0) scale(1);
+        }
+        30% {
+          transform: translate(50px, -30px) scale(1.12);
+        }
+        60% {
+          transform: translate(-25px, 40px) scale(0.88);
+        }
+      }
+
+      @keyframes float-orb-4 {
+        0%, 100% {
+          transform: translate(0, 0) scale(1);
+        }
+        40% {
+          transform: translate(-35px, -35px) scale(1.06);
+        }
+        80% {
+          transform: translate(40px, 30px) scale(0.94);
+        }
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      header,
+      section {
+        scroll-margin-top: 90px;
+      }
+
+      .container {
+        width: min(1120px, 100%);
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+
+      /* NAVBAR */
+      .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        backdrop-filter: blur(16px);
+        background: linear-gradient(
+          to bottom,
+          rgba(15, 23, 42, 0.95),
+          rgba(15, 23, 42, 0.7),
+          transparent
+        );
+        border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+      }
+
+      .navbar-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.9rem 0;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+      }
+
+      .brand-logo {
+        width: 38px;
+        height: 38px;
+        border-radius: 999px;
+        background: radial-gradient(circle at 30% 20%, #4f46e5, #0ea5e9 75%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        color: #e5e7eb;
+        box-shadow: 0 0 25px rgba(129, 140, 248, 0.7);
+      }
+
+      .brand-text h1 {
+        font-size: 1rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #e5e7eb;
+      }
+
+      .brand-text span {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+      }
+
+      .nav-links a {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        position: relative;
+        padding-bottom: 0.25rem;
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        border-radius: 999px;
+        background: linear-gradient(to right, #6366f1, #22d3ee);
+        transition: width 0.2s ease;
+      }
+
+      .nav-links a:hover {
+        color: #e5e7eb;
+      }
+
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      .nav-cta {
+        padding: 0.45rem 1.1rem;
+        border-radius: 999px;
+        background: linear-gradient(135deg, #4f46e5, #06b6d4);
+        color: white;
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        border: none;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        box-shadow: 0 12px 30px rgba(56, 189, 248, 0.45);
+      }
+
+      .nav-cta i {
+        font-size: 0.9rem;
+      }
+
+      .nav-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--text-main);
+        font-size: 1.3rem;
+      }
+
+      /* HERO / ACCUEIL */
+      .hero {
+        padding: 4.5rem 0 3.5rem;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2.7fr);
+        gap: 3rem;
+        align-items: center;
+      }
+
+      .badge-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.28rem 0.8rem;
+        border-radius: 999px;
+        border: 1px solid rgba(148, 163, 184, 0.4);
+        background: rgba(15, 23, 42, 0.8);
+        font-size: 0.7rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+      }
+
+      .badge-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: radial-gradient(circle at 30% 20%, #22c55e, #16a34a);
+        box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.25);
+      }
+
+      .hero-title {
+        margin-top: 1.2rem;
+        font-size: clamp(2.1rem, 3.1vw, 3rem);
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .hero-name {
+        background: linear-gradient(to right, #4f46e5, #22d3ee);
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+
+      .hero-subtitle {
+        margin-top: 0.8rem;
+        font-size: 0.98rem;
+        color: var(--text-muted);
+        max-width: 36rem;
+      }
+
+      .hero-subtitle strong {
+        color: #e5e7eb;
+      }
+
+      .hero-actions {
+        margin-top: 1.8rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.9rem;
+      }
+
+      .btn-primary {
+        padding: 0.7rem 1.5rem;
+        border-radius: 999px;
+        border: none;
+        background: linear-gradient(135deg, #4f46e5, #06b6d4);
+        color: white;
+        font-size: 0.9rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        cursor: pointer;
+        box-shadow: 0 18px 40px rgba(56, 189, 248, 0.45);
+      }
+
+      .btn-secondary {
+        padding: 0.7rem 1.5rem;
+        border-radius: 999px;
+        border: 1px solid rgba(148, 163, 184, 0.45);
+        background: rgba(15, 23, 42, 0.9);
+        color: var(--text-main);
+        font-size: 0.9rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        cursor: pointer;
+      }
+
+      .btn-secondary i {
+        color: #38bdf8;
+      }
+
+      .hero-meta {
+        margin-top: 1.6rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        font-size: 0.8rem;
+        color: var(--text-muted);
+      }
+
+      .hero-meta strong {
+        color: #e5e7eb;
+      }
+
+      .hero-card {
+        position: relative;
+        background: radial-gradient(circle at top, #1d2440, #020617 70%);
+        border-radius: 32px;
+        padding: 1.8rem 1.6rem;
+        box-shadow: var(--shadow-soft);
+        border: 1px solid rgba(148, 163, 184, 0.3);
+        overflow: hidden;
+      }
+
+      .hero-card-gradient {
+        position: absolute;
+        inset: -80%;
+        background: conic-gradient(
+          from 180deg at 50% 50%,
+          rgba(129, 140, 248, 0.75),
+          rgba(14, 165, 233, 0.4),
+          transparent,
+          transparent,
+          rgba(129, 140, 248, 0.75)
+        );
+        opacity: 0.25;
+        filter: blur(22px);
+        pointer-events: none;
+      }
+
+      .hero-card-inner {
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero-avatar {
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+      }
+
+      .hero-avatar-circle {
+        width: 58px;
+        height: 58px;
+        border-radius: 999px;
+        border: 2px solid rgba(148, 163, 184, 0.55);
+        background: radial-gradient(circle at 30% 20%, #4f46e5, #22d3ee 70%);
+        display: grid;
+        place-items: center;
+        font-size: 1.4rem;
+        color: #e5e7eb;
+        box-shadow: 0 16px 34px rgba(15, 23, 42, 1);
+      }
+
+      .hero-avatar-info span {
+        display: block;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--text-muted);
+      }
+
+      .hero-avatar-info h2 {
+        font-size: 1rem;
+        margin-top: 0.15rem;
+      }
+
+      .hero-badges {
+        margin-top: 1.2rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        font-size: 0.75rem;
+      }
+
+      .tag {
+        padding: 0.2rem 0.7rem;
+        border-radius: 999px;
+        border: 1px solid rgba(148, 163, 184, 0.4);
+        background: rgba(15, 23, 42, 0.9);
+        color: var(--text-muted);
+      }
+
+      .tag.primary {
+        border: none;
+        background: linear-gradient(135deg, #22d3ee, #4f46e5);
+        color: #0b1020;
+        font-weight: 600;
+      }
+
+      .hero-stats {
+        margin-top: 1.4rem;
+        padding-top: 1.1rem;
+        border-top: 1px dashed rgba(148, 163, 184, 0.5);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.4rem;
+        font-size: 0.75rem;
+      }
+
+      .stat-label {
+        color: var(--text-muted);
+      }
+
+      .stat-value {
+        font-weight: 600;
+      }
+
+      .hero-footer {
+        margin-top: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        font-size: 0.78rem;
+        color: var(--text-muted);
+      }
+
+      .hero-socials {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+      }
+
+      .social-pill {
+        width: 30px;
+        height: 30px;
+        border-radius: 999px;
+        border: 1px solid rgba(148, 163, 184, 0.6);
+        display: grid;
+        place-items: center;
+        background: rgba(15, 23, 42, 0.9);
+        cursor: pointer;
+      }
+
+      /* Boutons CV et LinkedIn dans la carte hero */
+      .hero-cta-buttons {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        flex-shrink: 0;
+      }
+
+      .hero-cta-buttons a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.5rem 0.9rem;
+        border-radius: 999px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .hero-cta-buttons a:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .hero-cta-buttons .btn-cv {
+        background: linear-gradient(135deg, #4f46e5, #06b6d4);
+        color: white;
+        border: none;
+      }
+
+      .hero-cta-buttons .btn-linkedin {
+        border: 1px solid rgba(148, 163, 184, 0.6);
+        background: rgba(15, 23, 42, 0.9);
+        color: #e5e7eb;
+      }
+
+      .hero-cta-buttons .btn-linkedin:hover {
+        border-color: #0a66c2;
+        background: rgba(10, 102, 194, 0.2);
+        color: #e5e7eb;
+      }
+
+      /* SECTIONS GÉNÉRIQUES */
+      .section {
+        padding: 3.5rem 0 3rem;
+      }
+
+      .section-header {
+        margin-bottom: 1.8rem;
+      }
+
+      .section-kicker {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: var(--accent);
+        margin-bottom: 0.5rem;
+      }
+
+      .section-title {
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-bottom: 0.3rem;
+      }
+
+      .section-subtitle {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+      }
+
+      /* A PROPOS + BTS SIO */
+      .about-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.25fr) minmax(0, 1.1fr);
+        gap: 2rem;
+        align-items: start;
+      }
+
+      .card {
+        background: var(--card-bg);
+        border-radius: var(--radius-xl);
+        border: 1px solid var(--border-subtle);
+        padding: 1.5rem 1.4rem;
+        box-shadow: var(--shadow-soft);
+      }
+
+      .card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.6rem;
+      }
+
+      .card p {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+      }
+
+      .chip-row {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .chip {
+        padding: 0.25rem 0.8rem;
+        border-radius: 999px;
+        font-size: 0.75rem;
+        background: var(--accent-soft);
+        border: 1px solid rgba(129, 140, 248, 0.6);
+        color: #e5e7eb;
+      }
+
+      .card-split {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+        margin-top: 1rem;
+        font-size: 0.83rem;
+      }
+
+      .card-split h4 {
+        font-size: 0.85rem;
+        margin-bottom: 0.2rem;
+      }
+
+      .list-bullets {
+        list-style: none;
+        margin-top: 0.6rem;
+      }
+
+      .list-bullets li {
+        display: flex;
+        gap: 0.4rem;
+        align-items: flex-start;
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-bottom: 0.25rem;
+      }
+
+      .list-bullets li i {
+        font-size: 0.4rem;
+        margin-top: 0.25rem;
+        color: #a5b4fc;
+      }
+
+      /* COMPÉTENCES & OUTILS */
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.6rem;
+      }
+
+      .pill-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin-top: 0.8rem;
+      }
+
+      .pill {
+        padding: 0.35rem 0.85rem;
+        border-radius: 999px;
+        font-size: 0.78rem;
+        border: 1px solid rgba(148, 163, 184, 0.55);
+        background: rgba(15, 23, 42, 0.9);
+        color: #e5e7eb;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+
+      .pill i {
+        font-size: 0.85rem;
+        color: #60a5fa;
+      }
+
+      /* PARCOURS */
+      .timeline {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+      }
+
+      .timeline-item {
+        position: relative;
+        padding: 1.3rem 1.2rem;
+        border-radius: 16px;
+        border: 1px solid var(--border-subtle);
+        background: rgba(15, 23, 42, 0.85);
+        box-shadow: var(--shadow-soft);
+      }
+
+      .timeline-item h4 {
+        font-size: 0.95rem;
+        margin-bottom: 0.1rem;
+      }
+
+      .timeline-item h5 {
+        font-size: 0.82rem;
+        color: var(--text-muted);
+        margin-bottom: 0.2rem;
+      }
+
+      .timeline-meta {
+        font-size: 0.75rem;
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        margin-bottom: 0.4rem;
+      }
+
+      .timeline-item p {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+      }
+
+      .timeline-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+        color: #38bdf8;
+      }
+
+      /* PROJETS */
+      .projects-controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+        margin-bottom: 1.6rem;
+        font-size: 0.78rem;
+      }
+
+      .filter-pill {
+        padding: 0.3rem 0.9rem;
+        border-radius: 999px;
+        border: 1px solid rgba(148, 163, 184, 0.6);
+        background: rgba(15, 23, 42, 0.9);
+        color: var(--text-muted);
+        cursor: pointer;
+        font-family: inherit;
+      }
+
+      .filter-pill.active {
+        background: linear-gradient(135deg, #4f46e5, #22d3ee);
+        color: #0b1020;
+        border-color: transparent;
+        font-weight: 600;
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1.3rem;
+      }
+
+      .project-card-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        transition: transform 0.2s ease;
+      }
+      .project-card-link:hover {
+        transform: translateY(-4px);
+      }
+      .project-card-link:hover .project-card {
+        border-color: rgba(99, 102, 241, 0.5);
+        box-shadow: 0 20px 50px rgba(15, 23, 42, 1), 0 0 0 1px rgba(99, 102, 241, 0.2);
+      }
+      .project-card {
+        border-radius: 18px;
+        border: 1px solid var(--border-subtle);
+        background: rgba(15, 23, 42, 0.95);
+        box-shadow: var(--shadow-soft);
+        padding: 1.1rem 1.1rem 1.2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+        font-size: 0.85rem;
+      }
+
+      .project-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 0.75rem;
+      }
+
+      .project-meta h4 {
+        font-size: 0.95rem;
+      }
+
+      .project-meta span {
+        font-size: 0.78rem;
+        color: var(--text-muted);
+      }
+
+      .project-lang {
+        font-size: 0.75rem;
+        color: #a5b4fc;
+      }
+
+      .project-footer {
+        margin-top: 0.4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.78rem;
+        color: var(--text-muted);
+      }
+
+      .project-footer a {
+        color: #38bdf8;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+      }
+
+      /* VEILLE TECH */
+      .veille-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+        gap: 1.8rem;
+      }
+
+      .veille-theme {
+        margin-top: 1.1rem;
+      }
+
+      .veille-theme h4 {
+        font-size: 0.95rem;
+        margin-bottom: 0.35rem;
+      }
+
+      .veille-theme p {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-bottom: 0.4rem;
+      }
+
+      .veille-list {
+        list-style: none;
+        font-size: 0.82rem;
+      }
+
+      .veille-list li {
+        margin-bottom: 0.5rem;
+      }
+
+      .veille-list span {
+        display: block;
+        color: var(--text-muted);
+      }
+
+      .veille-list small {
+        color: #6b7280;
+      }
+
+      /* CONTACT */
+      .contact-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+        gap: 2rem;
+        align-items: start;
+      }
+
+      .contact-lines {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+      }
+
+      .contact-lines p {
+        margin-bottom: 0.5rem;
+      }
+
+      .contact-lines strong {
+        color: #e5e7eb;
+      }
+
+      .contact-lines a {
+        color: #38bdf8;
+      }
+
+      .contact-form {
+        display: grid;
+        gap: 0.9rem;
+        font-size: 0.88rem;
+      }
+
+      .field-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+      }
+
+      .field-group label {
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: var(--text-muted);
+      }
+
+      .field-group input,
+      .field-group textarea {
+        padding: 0.6rem 0.8rem;
+        border-radius: 12px;
+        border: 1px solid rgba(148, 163, 184, 0.6);
+        background: rgba(15, 23, 42, 0.9);
+        color: var(--text-main);
+        font-family: inherit;
+        font-size: 0.88rem;
+        resize: vertical;
+        min-height: 44px;
+      }
+
+      .field-inline {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.9rem;
+      }
+
+      .contact-status {
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+        color: #4ade80;
+        display: none;
+      }
+      .contact-error {
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+        color: #f87171;
+      }
+      .contact-error a { color: #38bdf8; }
+
+      /* FOOTER */
+      footer {
+        border-top: 1px solid rgba(148, 163, 184, 0.25);
+        padding: 1.1rem 0 1.4rem;
+        margin-top: 2rem;
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        text-align: center;
+      }
+
+      footer strong {
+        color: #e5e7eb;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 900px) {
+        .hero-grid,
+        .about-grid,
+        .veille-grid,
+        .contact-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .hero {
+          padding-top: 3.2rem;
+        }
+
+        .hero-card {
+          margin-top: 1.5rem;
+        }
+      }
+
+      @media (max-width: 780px) {
+        .navbar-inner {
+          padding: 0.7rem 0;
+        }
+
+        .nav-links,
+        .nav-cta {
+          display: none;
+        }
+
+        .nav-toggle {
+          display: block;
+        }
+
+        .timeline {
+          grid-template-columns: minmax(0, 1fr);
+        }
+      }
+
+      @media (max-width: 640px) {
+        .section {
+          padding: 3rem 0 2.7rem;
+        }
+
+        .hero-actions {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .hero-footer {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Fond animé (mesh gradient style kothanromeo.dev) -->
+    <div class="bg-animation" aria-hidden="true">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="orb orb-4"></div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+      <div class="container navbar-inner">
+        <a href="#accueil" class="brand">
+          <div class="brand-logo">MG</div>
+          <div class="brand-text">
+            <h1>MATHEO GOODMAN</h1>
+            <span>BTS SIO • Option SISR cybersécurité</span>
+          </div>
+        </a>
+
+        <nav class="nav-links" aria-label="Navigation principale">
+          <a href="#accueil">Accueil</a>
+          <a href="#apropos">A&nbsp;propos</a>
+          <a href="#parcours">Parcours</a>
+          <a href="#projets">Projets</a>
+          <a href="#veille">Veille</a>
+          <a href="#contact">Contact</a>
+          <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+            <i class="fa-regular fa-paper-plane"></i>
+            Me contacter
+          </button>
+        </nav>
+
+        <button class="nav-toggle" aria-label="Menu mobile">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- ACCUEIL / HERO -->
+    <main id="accueil" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="badge-pill">
+            <span class="badge-dot"></span>
+            Portfolio BTS SIO PortfolioSISR Cybersécurité
+          </div>
+
+          <h2 class="hero-title">
+            Bienvenue sur mon
+            <span class="hero-name">portfolio</span>
+          </h2>
+
+          <p class="hero-subtitle">
+            Bonjour, je suis  <strong>Matheo GOODMAN</strong>, étudiant en
+            <strong>BTS SIO option SISR Cybersécurité</strong>. Sur ce site, vous trouverez ma
+            présentation, mon parcours, mes projets, ainsi que ma
+            <strong>veille technologique</strong>.
+          </p>
+
+          <div class="hero-actions">
+            <button
+              class="btn-primary"
+              onclick="document.getElementById('apropos').scrollIntoView({behavior:'smooth'})"
+            >
+              <i class="fa-solid fa-user-graduate"></i>
+              Découvrez mon profil
+            </button>
+            <button
+              class="btn-secondary"
+              onclick="document.getElementById('projets').scrollIntoView({behavior:'smooth'})"
+            >
+              <i class="fa-solid fa-diagram-project"></i>
+              Voir mes projets
+            </button>
+          </div>
+
+          <div class="hero-meta">
+            <span><strong>BTS SIO</strong> • Option SISR (system & reseaux et cybersécurité)</span>
+            <span><strong>Objectif</strong> : devenir ingénieur en cybersécurité (spécialiste en reseaux et cloud)</span>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Carte de profil">
+          <div class="hero-card-gradient"></div>
+          <div class="hero-card-inner">
+            <div class="hero-avatar">
+              <div class="hero-avatar-circle">MG</div>
+              <div class="hero-avatar-info">
+                <span>Portfolio BTS SIO</span>
+                <h2>Matheo GOODMAN</h2>
+              </div>
+            </div>
+
+            <div class="hero-badges">
+              <span class="tag primary">Étudiant BTS SIO SISR Cybersécurité</span>
+              <span class="tag">Administration systèmes & réseaux; Applicatif</span>
+              <span class="tag">Veille technologique IA  dans la cybersécurité </span>
+            </div>
+
+            <div class="hero-stats">
+              <div>
+                <div class="stat-label">Spécialité</div>
+                <div class="stat-value">Protection des Systèmes : Conception et mise en œuvre de mesures de sécurité pour protéger les systèmes d'information; métiers</div>
+              </div>
+              <div>
+                <div class="stat-label">Compétences clés</div>
+                <div class="stat-value">HTML • CSS • Python • VPN • DHCP • DNS • Firewall • Antivirus • Backup • Recovery • Cloud • IA</div>
+              </div>
+            </div>
+
+            <div class="hero-footer">
+              <p>
+                Vous retrouverez ci-dessous mon CV, mes projets réalisés en
+                formation et en autonomie, ainsi que ma veille sur l’IA dans la cybersécurité.
+              </p>
+              <div class="hero-cta-buttons" aria-label="CV et LinkedIn">
+                <a href="cv.html" class="btn-cv" target="_blank" rel="noopener">
+                  <i class="fa-solid fa-file-lines"></i>
+                  CV
+                </a>
+                <a href="https://www.linkedin.com/in/matheo-goodman-b4abba2b1" class="btn-linkedin" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- A PROPOS & BTS SIO -->
+    <section id="apropos" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">À propos 🗨️</div>
+          <h2 class="section-title">Qui suis-je ?</h2>
+          <p class="section-subtitle">
+            Présentation rapide et mise en avant de la filière
+            <strong>BTS SIO</strong> et de l’option <strong>SISR </strong>.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <article class="card">
+            <h3>Présentation</h3>
+            <p>
+              Je m’appelle <strong>Matheo GOODMAN</strong> et je suis étudiant
+              en dernière année de <strong>BTS Services Informatiques aux Organisations</strong>,
+              option <strong>SLAM</strong> (Systèmes Informatiques et Réseaux).
+            </p>
+            <p>
+              Passionné par la cybersécurité et la protection des systèmes des reseaux informatiques, j’apprends à
+              <strong>concevoir</strong>, <strong>administrer</strong> et
+              <strong>superviser</strong> des réseaux informatiques et des systèmes d'information.
+              pour répondre aux besoins des entreprises.
+            </p>
+            <p>
+              Sur ce portfolio, je présente mes <strong>projets</strong>, mon
+              <strong>parcours</strong> et une
+              <strong>veille technologique</strong> orientée autour de
+              l’intelligence artificielle dans la cybersécurité.
+            </p>
+
+            <div class="chip-row">
+              <span class="chip">BTS SIO • Option SISR Cybersécurité</span>
+              <span class="chip">Administration systèmes & réseaux</span>
+              <span class="chip">Server Nas & Palo Alto</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Qu’est-ce que le BTS SIO ? 🎓</h3>
+            <p>
+              Le <strong>BTS SIO</strong> (Services Informatiques aux
+              Organisations) forme des techniciens capables de
+              <strong>administrer et superviser</strong> des systèmes et réseaux informatiques et de sécuriser les données,
+              <strong>gérer</strong> des infrastructures réseaux et de la sécurité.
+            </p>
+            <p>
+              Il propose deux spécialités complémentaires : l’option
+              <strong>SISR</strong> (infrastructure, systèmes &amp; réseaux) et
+              l’option <strong>SLAM</strong> (développement &amp; applications
+              métiers).
+            </p>
+
+            <div class="card-split">
+              <div>
+                <h4>Option SISR</h4>
+                <ul class="list-bullets">
+                  <li>
+                    <i class="fa-solid fa-circle"></i>
+                    <span>Administration systèmes &amp; réseaux</span>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle"></i>
+                    <span>Maintenance &amp; sécurité des infrastructures</span>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle"></i>
+                    <span>Support et déploiement</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4>Option SLAM (mon choix)</h4>
+                <ul class="list-bullets">
+                  <li>
+                    <i class="fa-solid fa-circle"></i>
+                    <span>Analyse des besoins &amp; cahier des charges</span>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle"></i>
+                    <span>Développement d’applications web &amp; métiers</span>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle"></i>
+                    <span>Intégration et maintenance applicative</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPÉTENCES & OUTILS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Compétences &amp; Outils</div>
+          <h2 class="section-title">Ce que j’utilise au quotidien</h2>
+          <p class="section-subtitle">
+            Compétences techniques acquises en formation et en autodidacte, et
+            principaux outils de supervision et de gestion utilisés.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="card">
+            <h3>Mes compétences en cybersécurité et administration systèmes & réseaux 👨‍💻</h3>
+            <p>
+              Ces compétences ont été développées pendant mon
+              <strong>BTS SIO</strong> et à travers des projets personnels où je
+              mets en pratique de nouvelles technologies de cybersécurité et d'administration systèmes & réseaux.
+            </p>
+            <div class="pill-grid">
+              <span class="pill"
+                ><i class="fa-brands fa-html5"></i>VPN</span
+              >
+              <span class="pill"
+                ><i class="fa-brands fa-css3-alt"></i>DHCP</span
+              >
+              <span class="pill"
+                ><i class="fa-brands fa-js"></i>Windows Server</span
+              >
+              <span class="pill"><i class="fa-solid fa-database"></i>SERVER NAS</span>
+              <span class="pill"><i class="fa-brands fa-php"></i>Palo Alto</span>
+              <span class="pill"><i class="fa-brands fa-java"></i>sauvegardes</span>
+              <span class="pill"
+                ><i class="fa-solid fa-code"></i>Radius</span
+              >
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Mes outils / outils de supervision et de gestion ⚙️</h3>
+            <p>
+              J’utilise différents outils pour administrer, gérer et présenter
+              mes réalisations en cybersécurité et administration systèmes & réseaux.
+            </p>
+            <div class="pill-grid">
+              <span class="pill"
+                ><i class="fa-solid fa-code"></i>Radius</span
+              >
+              <span class="pill"
+                ><i class="fa-solid fa-code"></i>Palo Alto, Cisco firewall</span
+              >
+              <span class="pill"
+                ><i class="fa-brands fa-git-alt"></i>Active Directory , GLPI, Zabbix, Pfsense, Nagios</span
+              >
+              <span class="pill"
+                ><i class="fa-solid fa-palette"></i>Wireshark & SSH & FTP & VPN</span
+              >
+              <span class="pill"
+                ><i class="fa-solid fa-photo-film"></i>Proxmox & VMware,Hyper-V & Azure</span
+              >
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARCOURS -->
+    <section id="parcours" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Parcours</div>
+          <h2 class="section-title">
+            Mon parcours professionnel &amp; scolaire
+          </h2>
+          <p class="section-subtitle">
+            Expériences, stages et études qui ont construit mon profil
+            informatique.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-meta">Collectivité Territoriale de Guyane • 2025</div>
+            <h4>France Télévision  💼</h4>
+            <h5>Depuis 2026 • France</h5>
+            <p>
+              Administration des réseaux et des systèmes d'information 
+              de la Collectivité Territoriale de Guyane.Réalisation de server Nas et Streaming 
+              dans le service support informatique de france-télévision.Configuration de borne wifi.
+              Mise en place de règles et supervision d'appareils  dans le reseaux du  Palo alto. Ces
+              expériences m'ont permis d'acroite mes connaissance 
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-meta">Stage BTS SIO</div>
+            <h4>Stages en service informatique</h4>
+            <h5>Collectivités &amp; France Télévision</h5>
+            <p>
+              Réalisation de stages en <strong>service informatique</strong> :
+              participation à la maintenance, à l’assistance,administration et supervision  utilisateur et à la
+              mise en place de server et securisation de reseaux  .
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-meta">Études supérieures</div>
+            <h4>BTS SIO • Option SISR</h4>
+            <h5>Lycée  Léonard De Vinci (France) • 2024 - 2026</h5>
+            <p>
+              Formation en <strong>administration de system & réseaux</strong> :
+              Administration, configuration et supervision des infrastructures réseaux et systèmes, sécurisation des environnements,
+               gestion des incidents, maintien en conditions opérationnelles et documentation des architectures..
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-meta">Baccalauréat</div>
+            <h4>BAC STI2D / Général</h4>
+            <h5>2022 - 2024</h5>
+            <p>
+              Découverte des bases de l’informatique, de la technologie et des
+              sciences de l’ingénieur, qui m’ont naturellement orienté vers le
+              <strong>BTS SIO</strong>.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETS -->
+    <section id="projets" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Projets 🚧</div>
+          <h2 class="section-title">Mes réalisations</h2>
+          <p class="section-subtitle">
+            Sélection de projets réalisés en cours ou en autonomie. Chaque
+            projet a pour objectif de répondre à un besoin concret.
+          </p>
+        </div>
+
+        <div class="projects-controls">
+          <button class="filter-pill active" type="button" data-filter="all">
+            Tous les projets
+          </button>
+          <button class="filter-pill" type="button" data-filter="site">
+            Systèmes & Virtualisation 
+          </button>
+          <button class="filter-pill" type="button" data-filter="app">
+            Aministration & Gestion
+          </button>
+          <button class="filter-pill" type="button" data-filter="autre">
+            Supervision & Sécurité 
+          </button>
+        </div>
+
+        <div class="projects-grid">
+<a href="projet-1.html" class="project-card-link" title="Voir le projet : Server Vmix">
+            <article class="project-card" data-category="site">
+              <div class="project-meta">
+                <div>
+                  <span class="project-lang"> Systèmes & Virtualisation </span>
+                  <h4>Server Vmix</h4>
+                </div>
+              <span>2025</span>
+            </div>
+            <p>
+              Réalisation d’un server de streaming en
+              <strong> Vmix </strong> pour présenter au public  une activité live
+              (plusieurs plateformes,facebook,youtube,intagram,etc....)
+            </p>
+            <div class="project-footer">
+              <span>Server de diffusion • Logiciel Vmix • Server Live U</span>
+              <span>Maquette → Intégration complète</span>
+            </div>
+            </article>
+          </a>
+
+          <a href="projet-2.html" class="project-card-link" title="Voir le projet : Active Directory">
+            <article class="project-card" data-category="app">
+              <div class="project-meta">
+                <div>
+                  <span class="project-lang">Windows Server</span>
+                <h4>Active Directory (gestion)</h4>
+              </div>
+              <span>2025</span>
+            </div>
+            <p>
+              Serveur de gestion  windows connectée à une
+              <strong>base de données</strong> (AD) : formulaires,
+              insertion, modification et consultation de données.
+            </p>
+            <div class="project-footer">
+              <span>Administration • supervision </span>
+              <span>Proxmox &amp;</span>
+            </div>
+            </article>
+          </a>
+
+          <a href="projet-3.html" class="project-card-link" title="Voir le projet : Mini réseaux d'impression">
+            <article class="project-card" data-category="app">
+            <div class="project-meta">
+              <div>
+                <span class="project-lang">Administration du reseau qui s'occupe de l'impression</span>
+                <h4>Mini reseaux d'impression </h4>
+              </div>
+              <span>2025</span>
+            </div>
+            <p>
+              Développement d’un reseau informatique de la Collectivité térritorial 
+              <strong>PHP / MySQL</strong> avec système de connexion, gestion
+              d’utilisateurs et interface d’administration simplifiée.
+            </p>
+            <div class="project-footer">
+              <span> GLPI gestion •  nagios supervision •  Palo alto Sécurité de base</span>
+              <span></span>
+            </div>
+            </article>
+          </a>
+
+          <a href="projet-4.html" class="project-card-link" title="Voir le projet : Automatisation avec scripts">
+            <article class="project-card" data-category="autre">
+            <div class="project-meta">
+              <div>
+                <span class="project-lang">SCRIPT</span>
+                <h4>Automatisation avec scripts</h4>
+              </div>
+              <span>2025</span>
+            </div>
+            <p>
+              Création de petits scripts (batch / PowerShell / Python) pour
+              automatiser des tâches répétitives : sauvegardes, tri de fichiers,
+              etc.
+            </p>
+            <div class="project-footer">
+              <span>Python / Scripts</span>
+              <span>Gain de temps &amp; fiabilité</span>
+            </div>
+            </article>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- VEILLE TECHNOLOGIQUE -->
+    <section id="veille" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Veille technologique 📔</div>
+          <h2 class="section-title">L’intelligence artificielle & cybersécurité seront au  cœur de ma veille</h2>
+          <p class="section-subtitle">
+            Ma veille porte sur la question&nbsp;:
+            <strong>Quel est le futur de l’intelligence artificielle  dans la cybersécurité&nbsp;?</strong>
+          </p>
+        </div>
+
+        <div class="veille-grid">
+          <article class="card">
+            <h3>Qu’est-ce que la veille technologique ?</h3>
+            <p>
+              La <strong>veille technologique</strong> consiste à surveiller de
+              manière régulière les <strong>innovations</strong>, nouvelles
+              technologies, outils et tendances dans un domaine donné, afin
+              d’anticiper les évolutions et d’adapter ses compétences.
+            </p>
+            <p>
+              Pour ma veille, j’utilise des <strong>newsletters</strong>,
+              <strong>sites spécialisés</strong> et <strong>flux RSS</strong>
+              afin de suivre l’actualité de l’IA dans la cybersécurité, ses usages, ses risques.
+            </p>
+
+            <div class="veille-theme">
+              <h4>Mes principaux outils de veille</h4>
+              <ul class="list-bullets">
+                <li>
+                  <i class="fa-solid fa-circle"></i>
+                  <span>Flux RSS &amp; agrégateurs (ex : Feedly)</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle"></i>
+                  <span>Sites d’actualités high-tech et IA</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle"></i>
+                  <span>Articles de blogs techniques &amp; documentations</span>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Thèmes de ma veille</h3>
+            <ul class="veille-list">
+              <li>
+                <strong>Thème 1&nbsp;: Quel est le rôle de l'IA dans la cybersécurité&nbsp;?</strong>
+                <span>
+                  Définitions, grands principes, différences entre
+                  <em>IA faible</em> et <em>IA forte</em>, et exemples
+                  d'IA dans la cybersécurité actuelles.
+                </span>
+                <small>Sources : articles spécialisés, sites d’entreprises tech…</small>
+              </li>
+              <li>
+                <strong>Thème 2&nbsp;: Faut-il supprimer l'IA pour mieux la protéger nos données&nbsp;?</strong>
+                <span>
+                  Risques liés à l’utilisation malveillante de l’IA, à la
+                  désinformation, à la surveillance et à l’impact sur l’emploi.
+                </span>
+                <small>Sources : presse généraliste &amp; dossiers thématiques.</small>
+              </li>
+              <li>
+                <strong>Thème 3&nbsp;: Pourquoi l’IA peut être bénéfique&nbsp;?</strong>
+                <span>
+                  IA dans la médecine, la cybersécurité, les transports, les
+                  services publics… et comment elle peut aider les humains.
+                </span>
+                <small>Sources : acteurs de la santé, éditeurs de solutions IA…</small>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Contact ✉️</div>
+          <h2 class="section-title">Envoyer un message</h2>
+          <p class="section-subtitle">
+            Pour toute question, demande de CV ou proposition d'alternance,
+            vous pouvez utiliser le formulaire ci-dessous.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="card contact-lines">
+            <p><strong>Localisation :</strong><br />77000 Melun, France</p>
+            <p>
+              <strong>Email :</strong><br />
+              <a href="mailto:matheogoodman1@gmail.com"
+                >matheogoodman1@gmail.com</a
+              >
+            </p>
+            <p>
+              <strong>Téléphone :</strong><br />
+              +594 694 41 49 80
+            </p>
+            <p>
+              <strong>Disponibilité :</strong><br />
+              Recherche d'alternance dans la cybersécurité et l'administration systèmes & réseaux.
+              
+            </p>
+          </div>
+
+          <form id="contactForm" class="card contact-form" action="https://formspree.io/f/VOTRE_ID_FORMSPREE" method="POST">
+            <input type="hidden" name="_subject" value="Nouveau message depuis votre portfolio" />
+            <div class="field-inline">
+              <div class="field-group">
+                <label for="nom">Votre nom</label>
+                <input id="nom" name="nom" type="text" placeholder="Nom Prénom" />
+              </div>
+              <div class="field-group">
+                <label for="email">Votre mail *</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="vous@example.com"
+                />
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="sujet">Sujet *</label>
+              <input
+                id="sujet"
+                name="sujet"
+                type="text"
+                required
+                placeholder="Objet de votre message"
+              />
+            </div>
+
+            <div class="field-group">
+              <label for="message">Votre message *</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                required
+                placeholder="Votre message ici..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary" id="submitContactBtn">
+              <i class="fa-regular fa-paper-plane"></i>
+              Envoyer le message
+            </button>
+
+            <div id="contactStatus" class="contact-status" role="status">
+              Votre message a bien été envoyé. Vous recevrez une réponse rapidement.
+            </div>
+            <div id="contactError" class="contact-error" role="alert" style="display: none;">
+              Un problème est survenu. Vous pouvez m'écrire à <a href="mailto:matheogoodman1@gmail.com">matheogoodman1@gmail.com</a>.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        Copyright ©
+        <strong>GOODMAN Matheo</strong>
+        • Portfolio BTS SIO SISR 
+      </div>
+    </footer>
+
+    <script>
+      // Filtrage des projets par catégorie
+      document.addEventListener("DOMContentLoaded", function () {
+        const filterButtons = document.querySelectorAll(
+          ".projects-controls .filter-pill"
+        );
+        const projectCards = document.querySelectorAll(
+          ".projects-grid .project-card"
+        );
+
+        filterButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const filter = button.getAttribute("data-filter");
+            filterButtons.forEach((btn) => btn.classList.remove("active"));
+            button.classList.add("active");
+            projectCards.forEach((card) => {
+              const category = card.getAttribute("data-category");
+              if (filter === "all" || category === filter) {
+                card.style.display = "";
+              } else {
+                card.style.display = "none";
+              }
+            });
+          });
+        });
+
+        // Formulaire de contact : envoi vers Formspree puis notification
+        var contactForm = document.getElementById("contactForm");
+        if (contactForm) {
+          contactForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            var form = e.target;
+            var btn = document.getElementById("submitContactBtn");
+            var status = document.getElementById("contactStatus");
+            var err = document.getElementById("contactError");
+            var action = form.getAttribute("action");
+
+            if (!action || action.indexOf("VOTRE_ID_FORMSPREE") !== -1) {
+              err.style.display = "block";
+              err.innerHTML = "Configurez l’ID Formspree dans le formulaire (voir instructions dans le code).";
+              return;
+            }
+
+            if (status) status.style.display = "none";
+            if (err) err.style.display = "none";
+            if (btn) {
+              btn.disabled = true;
+              btn.innerHTML = "<i class=\"fa-solid fa-spinner fa-spin\"></i> Envoi...";
+            }
+
+            var formData = new FormData(form);
+            fetch(action, {
+              method: "POST",
+              body: formData,
+              headers: { Accept: "application/json" }
+            })
+              .then(function (r) { return r.json(); })
+              .then(function (data) {
+                if (data.ok && status) {
+                  status.style.display = "block";
+                  form.reset();
+                } else if (err) {
+                  err.style.display = "block";
+                }
+              })
+              .catch(function () {
+                if (err) err.style.display = "block";
+              })
+              .finally(function () {
+                if (btn) {
+                  btn.disabled = false;
+                  btn.innerHTML = "<i class=\"fa-regular fa-paper-plane\"></i> Envoyer le message";
+                }
+              });
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
